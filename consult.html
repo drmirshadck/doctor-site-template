@@ -107,8 +107,12 @@
 
 <script src="https://unpkg.com/@daily-co/daily-js"></script>
 <script>
-  const S = window.SITE, D = S.doctor;
-  const ROOM_URL = (S.video.roomUrl || '').trim();
+  const S = window.SITE;
+  // several doctors: consult.html?d=<doctor id> opens that doctor's own room
+  const DOCS = S.doctors || [];
+  const DD = DOCS.find(d => d.id === new URLSearchParams(location.search).get('d')) || DOCS[0] || {};
+  const D = { name: DD.name || S.doctor.name, photo: DD.photo || S.doctor.photo };
+  const ROOM_URL = (DD.roomUrl || S.video.roomUrl || '').trim();
   const $ = id => document.getElementById(id);
   const r = document.documentElement.style;
   r.setProperty('--navy', S.theme.brandDeep); r.setProperty('--blue', S.theme.brand); r.setProperty('--sky', S.theme.light);
