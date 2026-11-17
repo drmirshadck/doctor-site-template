@@ -87,6 +87,14 @@ window.SITE = {
     doctorEmail: ""               // the doctor's Microsoft email used for Cal.com, e.g. "doctorname@outlook.com"
   },
 
+  /* ---------- Own booking screen (no Cal.com window) ----------
+     The shared DotCom booking service shows free times from the doctor's Cal.com on this site's
+     own screen. Add this site to it first (booking-proxy/README.md), then fill in the url.
+     Empty = the Cal.com calendar is shown as before. */
+  booking: {
+    url: ""   // "https://dotcom-by-arshees-booking.drmirshadck.workers.dev"
+  },
+
   /* ---------- Payment (UPI) ---------- */
   payment: {
     upiId: "sample@upi",            // the doctor's real UPI ID
