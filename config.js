@@ -115,6 +115,13 @@ window.SITE = {
     // { id: "second", name: "Dr. Second Doctor", photo: "doctor2.jpg", title: "BHMS · Homoeopathic Physician", ... }
   ],
 
+  /* ---------- Booking calendar (DotCom's own calendar, Starter package) ----------
+     The clinic's helper on Cloudflare: free times, bookings, emails, and the clinic login page (doctor.html).
+     Starter: email notifications only (no phone alerts, the site is not installable). */
+  helper: {
+    url: ""   // e.g. "https://dotcom-by-arshees-dr-sample.drmirshadck.workers.dev" — empty = old Cal.com window
+  },
+
   /* ---------- "Consult from anywhere" panel ---------- */
   panel: {
     eyebrow: "Consult from anywhere",
